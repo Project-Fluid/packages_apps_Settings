@@ -64,4 +64,8 @@
     <string name="smallest_tick_label">Off</string>
     <string name="greatest_tick_label">Half screen</string>
     <string name="gesture_back_deadzone_label">Dead zone</string>
+
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock (BETA)</string>
+    <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
 </resources>
