@@ -16,6 +16,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Fluid version -->
-    <string name="fluid_version">FluidOS Версия</string>
+    <string name="fluid_version">Fluid Версия</string>
 </resources>
 
