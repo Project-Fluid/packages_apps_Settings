@@ -1207,5 +1207,12 @@ public final class Utils extends com.android.settingslib.Utils {
             }
         }
         return isMediaOutputDisabled;
+
+    public static String normalizeTitleCaseIfRequired(Context context, String input) {
+        if (!context.getResources().getBoolean(R.bool.language_capitalizes_nouns)) {
+            return input.toLowerCase();
+        }
+        return input;
+
     }
 }
