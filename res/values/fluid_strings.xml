@@ -20,4 +20,8 @@
     <string name="vendor_security_patch">Vendor security patch</string>
     <!-- Build date -->
     <string name="build_date">Build date</string>
+
+    <!-- Android debugging as root -->
+    <string name="adb_enable_root">Rooted debugging</string>
+    <string name="adb_enable_summary_root">Allow running Android debugging as root</string>
 </resources>
