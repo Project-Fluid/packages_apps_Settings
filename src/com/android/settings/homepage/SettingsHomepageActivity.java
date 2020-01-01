@@ -47,6 +47,7 @@ import com.android.settings.homepage.contextualcards.ContextualCardsFragment;
 import com.android.settings.overlay.FeatureFactory;
 
 import com.android.settingslib.drawable.CircleFramedDrawable;
+import android.provider.Settings;
 
 public class SettingsHomepageActivity extends FragmentActivity {
 
@@ -84,7 +85,7 @@ public class SettingsHomepageActivity extends FragmentActivity {
         });
         //getLifecycle().addObserver(avatarViewMixin);
 
-        if (!getSystemService(ActivityManager.class).isLowRamDevice()) {
+        if (!getSystemService(ActivityManager.class).isLowRamDevice() && isHomepageSuggestionEnabled()) {
             // Only allow contextual feature on high ram devices.
             showFragment(new ContextualCardsFragment(), R.id.contextual_cards_content);
         }
@@ -119,6 +120,11 @@ public class SettingsHomepageActivity extends FragmentActivity {
                 (int) context.getResources().getDimension(R.dimen.circle_avatar_size));
 
         return drawableUserIcon;
+    }
+
+    private boolean isHomepageSuggestionEnabled() {
+        return Settings.System.getInt(this.getContentResolver(),
+        Settings.System.SETTINGS_SUGGESTION_CARDS, 1) != 0;
     }
 
     @Override
