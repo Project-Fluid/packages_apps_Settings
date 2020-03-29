@@ -88,6 +88,12 @@
         settings:controller="com.android.settings.gestures.SwipeToScreenshotPreferenceController" />
 
     <Preference
+        android:key="gesture_adaptive_playback_summary"
+        android:title="@string/adaptive_playback_screen_title"
+        android:fragment="com.android.settings.gestures.AdaptivePlaybackGestureSettings"
+        settings:controller="com.android.settings.gestures.AdaptivePlaybackParentPreferenceController" />
+
+    <Preference
         android:key="gesture_power_menu_summary"
         android:title="@string/power_menu_setting_name"
         android:fragment="com.android.settings.gestures.PowerMenuSettings"
