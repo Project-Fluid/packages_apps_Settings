@@ -21,4 +21,12 @@
     <!-- Fluid version -->
     <string name="fluid_version">FluidOS version</string>
 
+    <!-- Fluid Settings -->
+
+    <string name="fluid_settings_title">Fluid Customisation</string>
+    <string name="fluid_settings_summary">Keep the Flow on!</string>
+
+    <!-- Specs -->
+    <string name="specs_title">Phone Specifications</string>
+    
 </resources>
