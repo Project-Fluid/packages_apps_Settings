@@ -92,6 +92,8 @@
     <string name="fast_charging_summary">Disable to reduce the heat produced by the device while charging or to extend the lifespan of the battery</string>
 
     <!-- Per-app data restrictions -->
+    <string name="data_usage_app_restrict_all">Allow network access</string>
+    <string name="data_usage_app_restrict_all_summary">Enable network usage</string>
     <string name="data_usage_app_restrict_mobile">Mobile data</string>
     <string name="data_usage_app_restrict_mobile_summary">Enable usage of mobile data</string>
     <string name="data_usage_app_restrict_vpn">VPN data</string>
