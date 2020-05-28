@@ -53,4 +53,7 @@
     <string name="backup_transport_setting_label">Change backup provider</string>
     <string name="backup_transport_title">Select backup provider</string>
 
+    <!-- Search keywords -->
+    <string name="keywords_notification_log">notifications, notification log</string>
+
 </resources>
