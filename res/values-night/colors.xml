@@ -17,17 +17,21 @@
 <resources>
     <color name="switchbar_switch_track_tint">#82000000</color>
     <color name="switchbar_switch_thumb_tint">@android:color/black</color>
-    <color name="homepage_accessibility_background">#783BE5</color>
-    <color name="homepage_support_background">#3F5FBD</color>
     <color name="homepage_card_dismissal_background">@*android:color/material_grey_900</color>
     <color name="contextual_card_dismissal_background">@*android:color/material_grey_900</color>
-    <color name="contextual_card_background">@*android:color/material_grey_900</color>
-    <color name="search_bar_background">@*android:color/material_grey_800</color>
+    <color name="contextual_card_background">@*android:color/transparent</color>
+    <color name="search_bar_background">@*android:color/transparent</color>
+    <color name="search_bar_stroke_color">#ff262626</color>
+    <color name="contextual_card_stroke_color">#ff262626</color>
+    <color name="divider_color">#ff262626</color>
+
     <!-- Dialog background color -->
     <color name="dialog_background">@*android:color/material_grey_800</color>
     <color name="notification_importance_selection_bg">@*android:color/material_grey_800</color>
     <color name="notification_importance_button_selected">#AECBFA</color> <!-- material blue 200 -->
     <color name="notification_importance_button_unselected">#5F6368</color>
     <color name="face_intro_outline">?android:attr/colorAccent</color>
+    <!-- Dashboard Icon background  -->
+    <color name="homepage_generic_icon_background">#14253D</color>
 </resources>
 
