@@ -13,6 +13,8 @@
     *;
 }
 
+-keep class com.fluid.customisation.**
+
 -keep class * extends com.android.settings.core.TogglePreferenceController {
     *;
 }

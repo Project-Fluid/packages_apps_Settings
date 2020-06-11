@@ -47,6 +47,14 @@
         android:fragment="com.android.settings.applications.AppAndNotificationDashboardFragment"/>
 
     <Preference
+        android:key="top_level_fluid"
+        android:title="@string/fluid_settings_title"
+        android:summary="@string/fluid_settings_summary"
+        android:icon="@drawable/ic_fluid_customization"
+        android:order="-91"
+        android:fragment="com.fluid.customisation.FluidCustomisation"/>
+
+    <Preference
         android:key="top_level_battery"
         android:title="@string/power_usage_summary_title"
         android:summary="@string/summary_placeholder"
