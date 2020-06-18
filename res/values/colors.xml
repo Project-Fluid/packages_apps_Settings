@@ -94,6 +94,7 @@
     <color name="homepage_accessibility_background">#305011C1</color>
     <color name="homepage_system_background">#309E9E9E</color>
     <color name="homepage_support_background">#3026459C</color>
+    <color name="homepage_fluid_background">#3072BBFF</color>
     <color name="homepage_generic_icon_background">#d1e3fa</color>
     <color name="homepage_location_background">#302EC7DC</color>
     <color name="homepage_about_background">#306F86DA</color>
@@ -150,5 +151,4 @@
 
     <color name="face_intro_outline">#ffdadce0</color>
 
-    <color name="homepage_fluid_background">#72BBFF</color>
 </resources>
