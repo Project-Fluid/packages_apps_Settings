@@ -82,12 +82,12 @@ public class SpecsPreferenceController extends BasePreferenceController {
 
     @Override
     public CharSequence getSummary() {
-        String memory = Integer.toString(getTotalRAM()) + "GB | " + getTotalInternalMemorySize() + "GB";
+        String memory = Integer.toString(getTotalRAM()) + "GB /" + "/ " + getTotalInternalMemorySize() + "GB";
         String cpu = SystemProperties.get(PROCESSOR_MODEL);
         if (!cpu.isEmpty()) {
-            return cpu + " | " + memory;
+            return cpu + " /" + "/ " + memory;
         } else if (cpu.isEmpty()) {
-          return "Unknown | " + memory;
+          return memory;
         } else {
           return mContext.getString(R.string.unknown);
        }
