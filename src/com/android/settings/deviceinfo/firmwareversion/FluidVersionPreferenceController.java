@@ -26,6 +26,7 @@ public class FluidVersionPreferenceController extends BasePreferenceController {
 
     @VisibleForTesting
     private static final String FLUID_VERSION_PROPERTY = "ro.fluid.build.version";
+    private static final String FLUID_BUILD_TYPE = "ro.fluid.buildtype";
 
     public FluidVersionPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
@@ -38,7 +39,12 @@ public class FluidVersionPreferenceController extends BasePreferenceController {
 
     @Override
     public CharSequence getSummary() {
-        return SystemProperties.get(FLUID_VERSION_PROPERTY,
-                mContext.getString(R.string.device_info_default));
+     String fluidVer =  SystemProperties.get(FLUID_VERSION_PROPERTY);
+     String fluidType = SystemProperties.get(FLUID_BUILD_TYPE);
+
+      if (!fluidVer.isEmpty() && !fluidType.isEmpty())
+	    return fluidVer + " /" + "/ " + fluidType;
+	else
+            return mContext.getString(R.string.unknown);
     }
 }
