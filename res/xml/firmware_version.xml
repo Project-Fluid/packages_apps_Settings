@@ -22,6 +22,12 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <!-- Fluid logo -->
+    <Preference 
+        android:key="fluid_logo"
+        android:order="-500"
+        android:layout="@layout/fluid_logo" />
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
