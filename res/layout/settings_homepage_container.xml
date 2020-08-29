@@ -40,7 +40,8 @@
             <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/top_container">
+                android:id="@+id/top_container"
+                app:elevation="0dp">
 
                 <FrameLayout
                     android:id="@+id/settings_text_frame"
