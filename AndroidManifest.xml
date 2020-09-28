@@ -3424,5 +3424,19 @@
         </activity>
 
         <!-- This is the longest AndroidManifest.xml ever. -->
+
+        <!-- Fluid Customisation activity -->
+        <activity android:name=".Settings$FluidCustomisationActivity"
+                  android:label="@string/fluid_customisation_title"
+                  android:icon="@drawable/ic_homepage_fluidcustomisation"
+                  android:parentActivityName="com.android.settings">
+            <intent-filter>
+                <action android:name="com.android.settings.action.SETTINGS"/>
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.fluid.customisation.FluidCustomisation"/>
+            <meta-data android:name="com.android.settings.summary"
+                       android:resource="@string/fluid_customisation_summary"/>
+        </activity>
     </application>
 </manifest>

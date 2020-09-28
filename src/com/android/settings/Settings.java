@@ -240,4 +240,9 @@ public class Settings extends SettingsActivity {
      */
     public static class MediaControlsSettingsActivity extends SettingsActivity {}
 
+    /**
+     * Fluid custom activities
+     */
+    public static class FluidCustomisationActivity extends SettingsActivity {}
+
 }

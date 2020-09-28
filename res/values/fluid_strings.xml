@@ -56,4 +56,8 @@
     <!-- Search keywords -->
     <string name="keywords_notification_log">notifications, notification log</string>
 
+    <!-- Fluid Customisation -->
+    <string name="fluid_customisation_title">Fluid Customisation</string>
+    <string name="fluid_customisation_summary">Keep the flow on!</string>
+
 </resources>

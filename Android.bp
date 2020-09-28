@@ -27,7 +27,10 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.java",
+        "src_customisation/**/*.java"
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -63,6 +66,13 @@ android_library {
         "ims-common",
         "app-compat-annotations",
     ],
+
+    resource_dirs: [
+        "res-customisation",
+        "res",
+    ],
+
+    aaptflags: ["--extra-packages com.fluid.customisation"],
 }
 
 platform_compat_config {
@@ -82,7 +92,6 @@ android_app {
         "settings-platform-compat-config",
     ],
     static_libs: ["Settings-core"],
-    resource_dirs: [],
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
