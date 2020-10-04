@@ -22,17 +22,22 @@
     <string name="fluid_version">FluidOS version</string>
 
     <!-- Fluid Settings -->
-
     <string name="fluid_settings_title">Fluid Customisation</string>
     <string name="fluid_settings_summary">Keep the Flow on!</string>
 
     <!-- Specs -->
     <string name="specs_title">Phone Specifications</string>
+
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
 
     <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
     <string name="connected_tws_device_saved_title">Saved Earbuds</string>
+
+    <!-- Navbar length -->
+    <string name="navbar_length">Gesture bar length</string>
+    <string name="short_label">Short</string>
+    <string name="long_label">Long</string>
 
 </resources>
