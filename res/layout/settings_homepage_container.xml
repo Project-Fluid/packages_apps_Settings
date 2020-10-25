@@ -49,6 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|top"
+                    android:gravity="center_vertical"
                     style="@style/SettingsHeaderStyle">
 
                     <TextView
@@ -57,7 +58,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
                         android:textColor="?android:attr/colorAccent"
-                        android:textSize="24sp"
+                        android:textSize="32sp"
                         android:text="@string/dashboard_title" />
 
                     <ImageView
@@ -66,7 +67,7 @@
                         android:paddingTop="@dimen/search_bar_avatar_top_bottom_padding"
                         android:layout_width="@dimen/search_bar_avatar_width"
                         android:layout_height="@dimen/search_bar_avatar_width"
-                        android:layout_gravity="end"
+                        android:layout_gravity="center_vertical|end"
                         android:contentDescription="@string/search_bar_account_avatar_content_description"/>
                 </FrameLayout>
 
