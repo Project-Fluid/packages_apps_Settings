@@ -26,6 +26,7 @@ import android.provider.Settings;
 import androidx.preference.Preference;
 
 import com.android.internal.annotations.VisibleForTesting;
+import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 
 public class FaceSettingsSwipePreferenceController
         extends FaceSettingsPreferenceController {
@@ -61,9 +62,10 @@ public class FaceSettingsSwipePreferenceController
     @Override
     public void updateState(Preference preference) {
         super.updateState(preference);
-        if (!FaceSettings.isAvailable(mContext)) {
+        EnforcedAdmin admeme;
+        if (!FaceSettings.isFaceHardwareDetected(mContext)) {
             preference.setEnabled(false);
-        } else if (adminDisabled()) {
+        } else if ((admeme = getRestrictingAdmin()) != null) {
             preference.setEnabled(false);
         } else if (!mFaceManager.hasEnrolledTemplates(getUserId())) {
             preference.setEnabled(false);
