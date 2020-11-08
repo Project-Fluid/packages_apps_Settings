@@ -32,7 +32,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
-import com.android.settings.widget.RadioButtonPreference;
+import com.android.settingslib.widget.RadioButtonPreference;
 import com.android.settings.widget.VideoPreference;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
