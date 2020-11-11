@@ -12,7 +12,4 @@
 -->
 <resources>
 
-    <!-- FluidCustomisation homepage icon -->
-    <color name="homepage_fluidcustomisation_background">?android:attr/colorAccent</color>
-
 </resources>
