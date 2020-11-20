@@ -60,4 +60,8 @@
     <string name="fluid_customisation_title">Fluid Customisation</string>
     <string name="fluid_customisation_summary">Keep the flow on!</string>
 
+    <!-- Back Gestures -->
+    <string name="smallest_tick_label">Off</string>
+    <string name="greatest_tick_label">Half screen</string>
+    <string name="gesture_back_deadzone_label">Dead zone</string>
 </resources>
