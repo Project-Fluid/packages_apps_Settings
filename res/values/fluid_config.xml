@@ -28,4 +28,6 @@
     <!-- Device specific doze package -->
     <string name="config_customDozePackage" translatable="false"></string>
 
+    <!-- Whether to show Selinux status in Settings -->
+    <bool name="config_showSelinuxStatus">true</bool>
 </resources>
