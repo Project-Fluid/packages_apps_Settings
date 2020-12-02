@@ -32,7 +32,11 @@ public class SelinuxStatusPreferenceController extends BasePreferenceController 
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        if (mContext.getResources().getBoolean(R.bool.config_showSelinuxStatus) == true) {
+              return AVAILABLE;
+        } else {
+              return UNSUPPORTED_ON_DEVICE;
+        }
     }
 
     @Override
