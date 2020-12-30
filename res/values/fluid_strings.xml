@@ -18,16 +18,10 @@
     <string name="selinux_status_permissive">Permissive</string>
     <string name="selinux_status_enforcing">Enforcing</string>
 
-    <!-- Fluid version -->
-    <string name="fluid_version">FluidOS version</string>
-
     <!-- Fluid Settings -->
     <string name="fluid_settings_title">Fluid Customisation</string>
     <string name="fluid_settings_summary">Keep the Flow on!</string>
-
-    <!-- Specs -->
-    <string name="specs_title">Phone Specifications</string>
-
+    
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
@@ -79,5 +73,14 @@
     <!-- Hotspot extras -->
     <string name="tethering_allow_vpn_upstreams_title">Allow clients to use VPNs</string>
     <string name="tethering_allow_vpn_upstreams_summary">Permit hotspot clients to use this device\u2019s VPN connections for upstream connectivity</string>
+
+    <!-- Fluid version page strings -->
+    <string name="fluid_version_branding">fluid</string>
+    <string name="fluid_version_device">Device</string>
+    <string name="fluid_version_cpu">CPU</string>
+    <string name="fluid_version_resolution">Resolution</string>
+    <string name="fluid_version_battery">Battery</string>
+    <string name="fluid_version_ram">RAM</string>
+    <string name="fluid_version_maintainer">Maintainer</string>
 
 </resources>

@@ -12,4 +12,8 @@
 -->
 <resources>
 
+    <!-- Fluid version page colors -->
+    <color name="fluid_version_border_color">#E6E6E6</color>
+    <color name="fluid_version_text_color">#121212</color>
+
 </resources>

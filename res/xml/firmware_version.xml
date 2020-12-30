@@ -21,11 +21,14 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
-    <!-- Fluid logo -->
-    <Preference 
-        android:key="fluid_logo"
+    <!-- Fluid Version -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout_height="match_parent"
+        android:key="fluid_version"
+        android:layout="@layout/fluid_version"
         android:order="-500"
-        android:layout="@layout/fluid_logo" />
+        android:selectable="false"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.FluidVersionPreferenceController" />
 
     <!-- Android version -->
     <Preference
@@ -35,22 +38,6 @@
         settings:enableCopying="true"
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
-
-    <!-- Fluid version -->
-    <Preference
-        android:key="fluid_version"
-        android:title="@string/fluid_version"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.FluidVersionPreferenceController"/>
-
-    <!-- Phone Specs -->
-    <Preference
-        android:key="phone_specs"
-        android:title="@string/specs_title"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.SpecsPreferenceController"/>
 
     <!-- Security patch -->
     <Preference
