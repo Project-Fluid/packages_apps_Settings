@@ -1,23 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2007 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+<!--
+    Copyright (C) 2020 FluidProject
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+         http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- SELinux Status -->
+    <string name="selinux_status">Статус SELinux\'a</string>
+    <string name="selinux_status_disabled">Выключен</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
 
+    <!-- Fluid version -->
+    <string name="fluid_version">Версия FluidOS</string>
+
+    <!-- Fluid Settings -->
+    <string name="fluid_settings_title">Настройки Fluid\'a</string>
+    <string name="fluid_settings_summary">Плыви по течению!</string>
+
+    <!-- Specs -->
+    <string name="specs_title">Характеристики телефона</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Свайп для скриншота</string>
+    <string name="three_finger_gesture_summary">Проведите тремя пальцами вниз по экрану чтобы сделать снимок экрана</string>
+
+    <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
+    <string name="connected_tws_device_saved_title">Сохраненные наушники</string>
+    
     <!-- Navbar length -->
-    <string name="navbar_length">Длина полоски</string>
-    <string name="hidden_label">Спрятана</string>
+    <string name="navbar_length">Длина панели жестов</string>
+    <string name="hidden_label">Спрятанная</string>
     <string name="long_label">Длинная</string>
 
+    <!-- Hardware info -->
+    <!-- Label for device's hardware platform value [CHAR LIMIT=40] -->
+    <string name="platform_revision">Платформа</string>
+    <!-- Label for device's hardware ram size [CHAR LIMIT=40] -->
+    <string name="total_ram">Количество RAM</string>
+
+    <!-- Volume link notification -->
+    <string name="volume_link_notification_title">Связать громкость уведомлений и громкость звонка</string>
+
+    <!-- Backup Transport selection settings menu and activity title -->
+    <string name="backup_transport_setting_label">Сменить поставщика резервного копирования</string>
+    <string name="backup_transport_title">Выберите поставщика резервного копирования</string>
+
+    <!-- Search keywords -->
+    <string name="keywords_notification_log">уведомления, журнал уведомлений</string>
+
+    <!-- Fluid Customisation -->
+    <string name="fluid_customisation_title">Настройки Fluid\'a</string>
+    <string name="fluid_customisation_summary">Плыви по течению!</string>
+
+    <!-- Back Gestures -->
+    <string name="smallest_tick_label">Выключена</string>
+    <string name="greatest_tick_label">Половина экрана</string>
+    <string name="gesture_back_deadzone_label">Мертвая зона</string>
+
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Быстрая разблокировка (BETA)</string>
+    <string name="unlock_quick_unlock_control_summary">Автоматическая разблокировка, когда введен PIN/Пароль</string>
+
+    <!-- Doze on charge -->
+    <string name="doze_on_charge_title">Всегда включенный экран на зарядке</string>
+    <string name="doze_on_charge_summary">Показывать всегда включенный экран во время зарядки</string>
+
+    <string name="theme_customization_font_title">Шрифт заголовка / Основной шрифт</string>
+    <string name="theme_customization_category">Кастомизацмя</string>
+    <string name="theme_customization_icon_shape_title">Форма иконок</string>
+    <string name="theme_customization_accent_color_title">Цвет системы</string>
+
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">Звук скриншота</string>
+	
+    <!-- Hotspot extras -->
+    <string name="tethering_allow_vpn_upstreams_title">Разрешить клиентам использовать VPN</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Разрешить клиентам точки доступа использовать VPN-подключения этого устройства</string>
+
+    <!-- Fluid version page strings -->
+    <string name="fluid_version_branding">fluid</string>
+    <string name="fluid_version_device">Устройство</string>
+    <string name="fluid_version_cpu">Процессор</string>
+    <string name="fluid_version_resolution">Разрешение экрана</string>
+    <string name="fluid_version_battery">Аккумулятор</string>
+    <string name="fluid_version_ram">Оперативная память</string>
+    <string name="fluid_version_maintainer">Сборщик</string>
 </resources>
