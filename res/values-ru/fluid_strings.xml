@@ -74,7 +74,6 @@
     <string name="doze_on_charge_summary">Показывать всегда включенный экран во время зарядки</string>
 
     <string name="theme_customization_font_title">Шрифт заголовка / Основной шрифт</string>
-    <string name="theme_customization_category">Кастомизацмя</string>
     <string name="theme_customization_icon_shape_title">Форма иконок</string>
     <string name="theme_customization_accent_color_title">Цвет системы</string>
 
