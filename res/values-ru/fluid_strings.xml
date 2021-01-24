@@ -88,8 +88,8 @@
     <string name="fluid_version_branding">fluid</string>
     <string name="fluid_version_device">Устройство</string>
     <string name="fluid_version_cpu">Процессор</string>
-    <string name="fluid_version_resolution">Разрешение экрана</string>
+    <string name="fluid_version_resolution">Разрешение</string>
     <string name="fluid_version_battery">Аккумулятор</string>
-    <string name="fluid_version_ram">Оперативная память</string>
+    <string name="fluid_version_ram">ОЗУ</string>
     <string name="fluid_version_maintainer">Сборщик</string>
 </resources>
