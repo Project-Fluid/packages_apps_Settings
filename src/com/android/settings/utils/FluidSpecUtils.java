@@ -44,7 +44,7 @@ public class FluidSpecUtils {
     private static final String DEVICE_NAME_MODEL_PROPERTY = "ro.product.system.model";
     private static final String MAINTAINER_NAME_MODEL_PROPERTY = "ro.fluid.maintainer";
     private static final String FLUID_CPU_MODEL_PROPERTY = "ro.fluid.cpu";
-    private static final String FALLBACK_CPU_MODEL_PROPERTY = "ro.board.model";
+    private static final String FALLBACK_CPU_MODEL_PROPERTY = "ro.board.platform";
     private static final String FLUID_MAINTAINER_PROPERTY = "ro.fluid.maintainer";
     private static final String POWER_PROFILE_CLASS = "com.android.internal.os.PowerProfile";
     static String aproxStorage;
