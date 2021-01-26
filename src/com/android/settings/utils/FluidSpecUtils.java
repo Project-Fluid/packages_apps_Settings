@@ -47,7 +47,7 @@ public class FluidSpecUtils {
     private static final String FALLBACK_CPU_MODEL_PROPERTY = "ro.board.platform";
     private static final String FLUID_MAINTAINER_PROPERTY = "ro.fluid.maintainer";
     private static final String POWER_PROFILE_CLASS = "com.android.internal.os.PowerProfile";
-    static String aproxStorage;
+    public static String aproxStorage;
 
     public static String getTotalInternalMemorySize() {
         File path = Environment.getDataDirectory();
