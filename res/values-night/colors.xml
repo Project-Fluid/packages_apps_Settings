@@ -15,6 +15,7 @@
 -->
 
 <resources>
+    <color name="switchbar_background_color">#29FFFFFF</color>
     <color name="switchbar_switch_track_tint">#82000000</color>
     <color name="switchbar_switch_thumb_tint">@android:color/black</color>
     <color name="homepage_card_dismissal_background">@*android:color/material_grey_900</color>

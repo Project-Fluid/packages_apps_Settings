@@ -126,7 +126,7 @@
     <color name="homepage_privacy">#5E97F6</color>
     <color name="homepage_fluid_customisation">#72BBFF</color>
 
-    <color name="switchbar_background_color">@*android:color/material_grey_600</color>
+    <color name="switchbar_background_color">#52000000</color>
     <color name="switchbar_switch_track_tint">#BFFFFFFF</color>
     <color name="switchbar_switch_thumb_tint">@android:color/white</color>
 
