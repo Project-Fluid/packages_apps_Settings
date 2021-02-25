@@ -84,6 +84,14 @@
     <string name="tethering_allow_vpn_upstreams_title">Разрешить клиентам использовать VPN</string>
     <string name="tethering_allow_vpn_upstreams_summary">Разрешить клиентам точки доступа использовать VPN-подключения этого устройства</string>
 
+    <!-- Torch Power button gestures -->
+    <string name="power_button_torch_title">Фонарик на выключенном экране</string>
+    <string name="power_button_torch_summary">Когда экран выключен, зажмите кнопку питания, чтобы включить фонарик</string>
+
+    <!-- FastCharge feature -->
+    <string name="fast_charging_title">Быстрая зарядка</string>
+    <string name="fast_charging_summary">Отключите, чтобы уменьшить нагрев устройства во время зарядки или продлить срок службы аккумулятора</string>
+
     <!-- Fluid version page strings -->
     <string name="fluid_version_branding">fluid</string>
     <string name="fluid_version_device">Устройство</string>
