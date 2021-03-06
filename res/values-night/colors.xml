@@ -45,8 +45,5 @@
 
     <color name="homepage_generic_icon_background">#14253D</color>
 
-    <!-- Fluid version page colors -->
-    <color name="fluid_version_border_color">#242424</color>
-    <color name="fluid_version_text_color">#FFFFFF</color>
 </resources>
 

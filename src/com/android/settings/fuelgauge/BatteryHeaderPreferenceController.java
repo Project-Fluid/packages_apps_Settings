@@ -34,13 +34,16 @@ import android.widget.TextView;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
+import androidx.core.content.ContextCompat;
 
 import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
 import com.android.settings.core.PreferenceControllerMixin;
+import com.android.settings.fuelgauge.batterytip.BatteryTipPolicy;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.utils.AnnotationSpan;
 import com.android.settings.widget.EntityHeaderController;
+import com.android.settings.widget.ProgressCard;
 import com.android.settingslib.HelpUtils;
 import com.android.settingslib.Utils;
 import com.android.settingslib.core.lifecycle.Lifecycle;
@@ -60,16 +63,13 @@ public class BatteryHeaderPreferenceController extends BasePreferenceController
     @VisibleForTesting
     BatteryStatusFeatureProvider mBatteryStatusFeatureProvider;
     @VisibleForTesting
-    BatteryMeterView mBatteryMeterView;
-    @VisibleForTesting
-    TextView mBatteryPercentText;
-    @VisibleForTesting
-    TextView mSummary1;
+    ProgressCard mBatteryInfoCard;
 
     private Activity mActivity;
     private PreferenceFragmentCompat mHost;
     private Lifecycle mLifecycle;
     private final PowerManager mPowerManager;
+    private BatteryTipPolicy mPolicy;
 
     private LayoutPreference mBatteryLayoutPref;
 
@@ -96,10 +96,7 @@ public class BatteryHeaderPreferenceController extends BasePreferenceController
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
         mBatteryLayoutPref = screen.findPreference(getPreferenceKey());
-        mBatteryMeterView = mBatteryLayoutPref
-                .findViewById(R.id.battery_header_icon);
-        mBatteryPercentText = mBatteryLayoutPref.findViewById(R.id.battery_percent);
-        mSummary1 = mBatteryLayoutPref.findViewById(R.id.summary1);
+        mBatteryInfoCard = mBatteryLayoutPref.findViewById(R.id.battery_info_card);
 
         if (com.android.settings.Utils.isBatteryPresent(mContext)) {
             quickUpdateHeaderPreference();
@@ -122,67 +119,51 @@ public class BatteryHeaderPreferenceController extends BasePreferenceController
     }
 
     public void updateHeaderPreference(BatteryInfo info) {
-        mBatteryPercentText.setText(formatBatteryPercentageText(info.batteryLevel));
+        mBatteryInfoCard.setTitle(formatBatteryPercentageText(info.batteryLevel).toString());
         if (!mBatteryStatusFeatureProvider.triggerBatteryStatusUpdate(this, info)) {
             if (BatteryUtils.isBatteryDefenderOn(info)) {
-                mSummary1.setText(null);
+                mBatteryInfoCard.setSummary(null);
             } else if (info.remainingLabel == null) {
-                mSummary1.setText(info.statusLabel);
+                mBatteryInfoCard.setSummary(info.statusLabel);
             } else {
-                mSummary1.setText(info.remainingLabel);
+                mBatteryInfoCard.setSummary(info.remainingLabel.toString());
             }
         }
-
-        mBatteryMeterView.setBatteryLevel(info.batteryLevel);
-        mBatteryMeterView.setCharging(!info.discharging);
-        mBatteryMeterView.setPowerSave(mPowerManager.isPowerSaveMode());
     }
 
     /**
      * Callback which receives text for the summary line.
      */
     public void updateBatteryStatus(String statusLabel) {
-        mSummary1.setText(statusLabel);
+        mBatteryInfoCard.setSummary(statusLabel);
     }
 
     public void quickUpdateHeaderPreference() {
         Intent batteryBroadcast = mContext.registerReceiver(null,
                 new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
         final int batteryLevel = Utils.getBatteryLevel(batteryBroadcast);
-        final boolean discharging =
-                batteryBroadcast.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1) == 0;
 
-        // Set battery level and charging status
-        mBatteryMeterView.setBatteryLevel(batteryLevel);
-        mBatteryMeterView.setCharging(!discharging);
-        mBatteryMeterView.setPowerSave(mPowerManager.isPowerSaveMode());
-        mBatteryPercentText.setText(formatBatteryPercentageText(batteryLevel));
+        // Set charging status
+        mBatteryInfoCard.setProgress(batteryLevel);
+        mBatteryInfoCard.setTitle(formatBatteryPercentageText(batteryLevel).toString());
+        if (mPowerManager.isPowerSaveMode()) {
+            mBatteryInfoCard.setTitleTint(ContextCompat.getColor(mContext, R.color.battery_info_card_power_save));
+        } else if (batteryLevel <= 15) {
+            mBatteryInfoCard.setTitleTint(ContextCompat.getColor(mContext, R.color.battery_info_card_low));
+        } else {
+            mBatteryInfoCard.setTitleTint(android.R.attr.colorAccent);
+        }
     }
 
     @VisibleForTesting
     void showHelpMessage() {
-        final LinearLayout batteryInfoLayout =
-                mBatteryLayoutPref.findViewById(R.id.battery_info_layout);
-        // Remove battery meter icon
-        mBatteryMeterView.setVisibility(View.GONE);
-        // Update the width of battery info layout
-        final ViewGroup.LayoutParams params = batteryInfoLayout.getLayoutParams();
-        params.width = LinearLayout.LayoutParams.WRAP_CONTENT;
-        batteryInfoLayout.setLayoutParams(params);
-        mBatteryPercentText.setText(mContext.getText(R.string.unknown));
+        mBatteryInfoCard.setTitle(mContext.getText(R.string.unknown).toString());
         // Add linkable text for learn more
         final Intent helpIntent = HelpUtils.getHelpIntent(mContext,
                 mContext.getString(R.string.help_url_battery_missing),
                 mContext.getClass().getName());
         final AnnotationSpan.LinkInfo linkInfo = new AnnotationSpan
                 .LinkInfo(mContext, ANNOTATION_URL, helpIntent);
-        if (linkInfo.isActionable()) {
-            mSummary1.setMovementMethod(LinkMovementMethod.getInstance());
-            mSummary1.setText(AnnotationSpan
-                    .linkify(mContext.getText(R.string.battery_missing_help_message), linkInfo));
-        } else {
-            mSummary1.setText(mContext.getText(R.string.battery_missing_message));
-        }
     }
 
     private CharSequence formatBatteryPercentageText(int batteryLevel) {

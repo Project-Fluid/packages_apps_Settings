@@ -13,14 +13,11 @@
 <resources>
 
     <!-- Fluid version page colors -->
-    <color name="fluid_version_border_color">#E6E6E6</color>
-    <color name="fluid_version_text_color">#121212</color>
+    <color name="fluid_version_border_color">#242424</color>
+    <color name="fluid_version_text_color">#FFFFFF</color>
 
-    <!-- ProgressCard -->
-    <color name="progress_card_text_color">#121212</color>
-    <color name="progress_card_progress_color">#F2F2F2</color>
-    <color name="progress_card_background_color">#58F2F2F2</color>
-    <color name="battery_info_card_power_save">#FF9800</color>
-    <color name="battery_info_card_low">#F44336</color>
+    <color name="progress_card_text_color">#FFFFFF</color>
+    <color name="progress_card_progress_color">#242424</color>
+    <color name="progress_card_background_color">#58242424</color>
 
 </resources>

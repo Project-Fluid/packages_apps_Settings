@@ -170,6 +170,12 @@
         <attr name="android:drawable" />
     </declare-styleable>
 
+    <declare-styleable name="ProgressCard">
+        <attr name="title" format="string" />
+        <attr name="summary" format="string" />
+        <attr name="progress" format="integer" />
+    </declare-styleable>
+
     <attr name="twoStateButtonPreferenceStyle" format="reference" />
 
     <attr name="fingerprint_layout_theme" format="reference" />
