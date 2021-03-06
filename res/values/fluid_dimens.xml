@@ -12,14 +12,6 @@
 -->
 <resources>
 
-    <!-- Fluid version page colors -->
-    <color name="fluid_version_border_color">#E6E6E6</color>
-    <color name="fluid_version_text_color">#121212</color>
-    <color name="search_bar_text_color">#FFB1B1B1</color>
-    <color name="settings_header_color">#FF000000</color>
-    <color name="fluid_card_stroke">#14000000</color>
-
     <!-- ProgressCard -->
-    <color name="progress_card_progress_color">@color/fluid_card_stroke</color>
-
+    <dimen name="progress_card_horizontal_padding">16dp</dimen>
 </resources>
