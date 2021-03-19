@@ -13,83 +13,83 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- SELinux Status -->
-    <string name="selinux_status">Статус SELinux\'a</string>
+    <string name="selinux_status">Режим SELinux</string>
     <string name="selinux_status_disabled">Выключен</string>
     <string name="selinux_status_permissive">Permissive</string>
     <string name="selinux_status_enforcing">Enforcing</string>
-
-    <!-- Fluid version -->
-    <string name="fluid_version">Версия FluidOS</string>
-
     <!-- Fluid Settings -->
-    <string name="fluid_settings_title">Настройки Fluid\'a</string>
+    <string name="fluid_settings_title">Настройки Fluid</string>
     <string name="fluid_settings_summary">Плыви по течению!</string>
-
-    <!-- Specs -->
-    <string name="specs_title">Характеристики телефона</string>
-
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Свайп для скриншота</string>
-    <string name="three_finger_gesture_summary">Проведите тремя пальцами вниз по экрану чтобы сделать снимок экрана</string>
-
+    <string name="three_finger_gesture_summary">Смахните тремя пальцами вниз, чтобы сделать скриншот</string>
     <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
-    <string name="connected_tws_device_saved_title">Сохраненные наушники</string>
-    
+    <string name="connected_tws_device_saved_title">Сохранённые наушники</string>
     <!-- Navbar length -->
-    <string name="navbar_length">Длина панели жестов</string>
-    <string name="hidden_label">Спрятанная</string>
-    <string name="long_label">Длинная</string>
-
+    <string name="navbar_length">Длина полоски жестов</string>
+    <string name="hidden_label">Скрыто</string>
+    <string name="long_label">Длинный</string>
     <!-- Hardware info -->
     <!-- Label for device's hardware platform value [CHAR LIMIT=40] -->
     <string name="platform_revision">Платформа</string>
     <!-- Label for device's hardware ram size [CHAR LIMIT=40] -->
-    <string name="total_ram">Количество RAM</string>
-
+    <string name="total_ram">Всего ОЗУ</string>
     <!-- Volume link notification -->
-    <string name="volume_link_notification_title">Связать громкость уведомлений и громкость звонка</string>
-
+    <string name="volume_link_notification_title">Объединить громкость рингтона и уведомлений</string>
     <!-- Backup Transport selection settings menu and activity title -->
-    <string name="backup_transport_setting_label">Сменить поставщика резервного копирования</string>
-    <string name="backup_transport_title">Выберите поставщика резервного копирования</string>
-
+    <string name="backup_transport_setting_label">Сменить поставщика услуг резервного копирования</string>
+    <string name="backup_transport_title">Выберите поставщика услуг резервного копирования</string>
     <!-- Search keywords -->
     <string name="keywords_notification_log">уведомления, журнал уведомлений</string>
-
     <!-- Fluid Customisation -->
-    <string name="fluid_customisation_title">Настройки Fluid\'a</string>
+    <string name="fluid_customisation_title">Настройки Fluid</string>
     <string name="fluid_customisation_summary">Плыви по течению!</string>
-
     <!-- Back Gestures -->
-    <string name="smallest_tick_label">Выключена</string>
+    <string name="smallest_tick_label">Выкл</string>
     <string name="greatest_tick_label">Половина экрана</string>
-    <string name="gesture_back_deadzone_label">Мертвая зона</string>
-
+    <string name="gesture_back_deadzone_label">Игнорируемая область для жеста «Назад»</string>
     <!-- Quick unlock -->
-    <string name="unlock_quick_unlock_control_title">Быстрая разблокировка (BETA)</string>
-    <string name="unlock_quick_unlock_control_summary">Автоматическая разблокировка, когда введен PIN/Пароль</string>
-
+    <string name="unlock_quick_unlock_control_title">Быстрая разблокировка (Бета)</string>
+    <string name="unlock_quick_unlock_control_summary">Разблокировать автоматически при вводе правильного PIN-кода/пароля</string>
     <!-- Doze on charge -->
-    <string name="doze_on_charge_title">Всегда включенный экран на зарядке</string>
-    <string name="doze_on_charge_summary">Показывать всегда включенный экран во время зарядки</string>
-
-    <string name="theme_customization_font_title">Шрифт заголовка / Основной шрифт</string>
-    <string name="theme_customization_icon_shape_title">Форма иконок</string>
-    <string name="theme_customization_accent_color_title">Цвет системы</string>
-
+    <string name="doze_on_charge_title">Всегда включать во время зарядки</string>
+    <string name="doze_on_charge_summary">Оставлять экран включённым во время зарядки</string>
     <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Звук скриншота</string>
-	
     <!-- Hotspot extras -->
     <string name="tethering_allow_vpn_upstreams_title">Разрешить клиентам использовать VPN</string>
-    <string name="tethering_allow_vpn_upstreams_summary">Разрешить клиентам точки доступа использовать VPN-подключения этого устройства</string>
-
+    <string name="tethering_allow_vpn_upstreams_summary">Разрешать клиентам точки доступа использовать VPN этого устройства для подключений</string>
     <!-- Fluid version page strings -->
     <string name="fluid_version_branding">fluid</string>
     <string name="fluid_version_device">Устройство</string>
-    <string name="fluid_version_cpu">Процессор</string>
+    <string name="fluid_version_cpu">ЦП</string>
     <string name="fluid_version_resolution">Разрешение</string>
-    <string name="fluid_version_battery">Аккумулятор</string>
+    <string name="fluid_version_battery">Батарея</string>
     <string name="fluid_version_ram">ОЗУ</string>
-    <string name="fluid_version_maintainer">Сборщик</string>
+    <string name="fluid_version_maintainer">Сопровождающий</string>
+    <!-- Torch Power button gestures -->
+    <string name="power_button_torch_title">Быстрый фонарик</string>
+    <string name="power_button_torch_summary">Когда экран выключен, долгое нажатие кнопки питания включит фонарик</string>
+    <!-- FastCharge feature -->
+    <string name="fast_charging_title">Быстрая зарядка</string>
+    <string name="fast_charging_summary">Выключите, чтобы уменьшить тепло, производимое устройством во время зарядки или продлить срок службы батареи</string>
+    <!-- Per-app data restrictions -->
+    <string name="data_usage_app_restrict_all">Доступ к сети</string>
+    <string name="data_usage_app_restrict_all_summary">Разрешить доступ к сети</string>
+    <string name="data_usage_app_restrict_mobile">Мобильные данные</string>
+    <string name="data_usage_app_restrict_mobile_summary">Разрешить использование мобильных данных</string>
+    <string name="data_usage_app_restrict_vpn">VPN</string>
+    <string name="data_usage_app_restrict_vpn_summary">Разрешить использование VPN</string>
+    <string name="data_usage_app_restrict_wifi">Wi\u2011Fi</string>
+    <string name="data_usage_app_restrict_wifi_summary">Включить использование Wi\u2011Fi</string>
+    <!-- Battery stats reset -->
+    <string name="battery_stats_reset">Очистить данные об использовании?</string>
+    <string name="battery_stats_message">Данные об использовании батареи будут стёрты</string>
+    <string name="battery_stats_clear">@string/proxy_clear_text</string>
+    <!-- Face Unlock -->
+    <string name="security_settings_face_unlock_redo_face_scan_summary">Удалить существующий скан лица и создать новый</string>
+    <string name="security_settings_face_unlock_redo_face_scan_title">Повторить сканирование лица</string>
+    <string name="security_dashboard_summary_face_and_fingerprint">Блокировка экрана и биометрические способы аутентификации</string>
+    <string name="face_redo_confirm_btn">Повторить</string>
+    <string name="face_redo_warning_msg">Вы хотите удалить существующий скан лица и создать новый?</string>
 </resources>
