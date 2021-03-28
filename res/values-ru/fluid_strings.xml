@@ -81,7 +81,7 @@
     <string name="data_usage_app_restrict_vpn">VPN</string>
     <string name="data_usage_app_restrict_vpn_summary">Разрешить использование VPN</string>
     <string name="data_usage_app_restrict_wifi">Wi\u2011Fi</string>
-    <string name="data_usage_app_restrict_wifi_summary">Включить использование Wi\u2011Fi</string>
+    <string name="data_usage_app_restrict_wifi_summary">Разрешить использование Wi\u2011Fi</string>
     <!-- Battery stats reset -->
     <string name="battery_stats_reset">Очистить данные об использовании?</string>
     <string name="battery_stats_message">Данные об использовании батареи будут стёрты</string>
@@ -92,4 +92,38 @@
     <string name="security_dashboard_summary_face_and_fingerprint">Блокировка экрана и биометрические способы аутентификации</string>
     <string name="face_redo_confirm_btn">Повторить</string>
     <string name="face_redo_warning_msg">Вы хотите удалить существующий скан лица и создать новый?</string>
+    <!-- DC Dimming -->
+    <string name="dc_dimming_title">DC Dimming</string>
+    <string name="dc_dimming_info">Уменьшает нагрузку на глаза при низкой яркости экрана, но может привести к снижению качества изображения и плохой цветопередаче.</string>
+    <string name="dc_dimming_auto_mode_title">Расписание</string>
+    <string name="dc_dimming_mode_brightness">Включать, когда яркость ниже порога</string>
+    <string name="dc_dimming_mode_full">В зависимости от времени и яркости</string>
+    <string name="dc_dimming_brightness_title">Порог яркости</string>
+    <string name="dc_dimming_brightness_disabled">Выключено</string>
+    <string name="dc_dimming_restore_auto_mode">Восстановить автоматический режим</string>
+    <string name="dc_dimming_brightness_info">Активировать DC Dimming только когда средняя яркость ниже порога</string>
+    <string name="dc_dimming_off_auto_mode_auto">Включать автоматически</string>
+    <string name="dc_dimming_on_auto_mode_auto">Выключить автоматически</string>
+    <string name="keywords_display_dc_dimming">dc dimming, мерцание, глаз, помехи</string>
+    <!-- App Lock -->
+    <string name="applock_title">Блокировка приложений</string>
+    <string name="applock_locked">Заблокировано</string>
+    <string name="applock_unlocked">Разблокировано</string>
+    <string name="applock_locked_apps">Заблокированные приложения</string>
+    <string name="applock_unlocked_apps">Разблокированные приложения</string>
+    <string name="applock_show_only_on_wake">Одноразовая аутентификация</string>
+    <string name="applock_show_only_on_wake_on_summary">После аутентификации приложение будет оставаться разблокированным до блокировки устройства</string>
+    <string name="applock_show_only_on_wake_off_summary">После аутентификации приложение останется разблокированным на 15 секунд после выхода</string>
+    <string name="applock_notification_info">Вы можете показать/скрыть содержимое уведомлений для каждого приложения, нажав на значок уведомления, отображаемый в настройках каждого заблокированного приложения</string>
+    <string name="applock_show_notif">Содержимое уведомлений отображается</string>
+    <string name="applock_hide_notif">Содержимое уведомлений скрывается</string>
+    <string name="applock_setup">Настройки блокировщика приложений</string>
+    <string name="applock_overlay_summary">Эта функция недоступна, поскольку приложение заблокировано</string>
+    <plurals name="applock_summary">
+        <item quantity="one">%d приложение заблокировано</item>
+        <item quantity="few">%d приложения заблокированы</item>
+        <item quantity="many">%d приложений заблокировано</item>
+        <item quantity="other">%d приложений заблокировано</item>
+    </plurals>
+    <string name="keywords_applock_settings">блокировка приложений</string>
 </resources>
