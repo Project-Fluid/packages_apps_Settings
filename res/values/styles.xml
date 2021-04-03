@@ -310,7 +310,10 @@
     <style name="TextAppearance.SearchBar"
            parent="@*android:style/TextAppearance.DeviceDefault.Widget.Toolbar.Subtitle">
         <item name="android:textSize">@dimen/search_bar_text_size</item>
-        <item name="android:layout_gravity">center_horizontal|clip_horizontal</item>
+        <item name="android:textColor">@color/search_bar_text_color</item>
+        <item name="android:maxWidth">150dp</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
     </style>
 
     <style name="TextAppearance.HomepageCardTitle"
@@ -469,34 +472,46 @@
     </style>
 
     <style name="ContextualCardStyle">
+        <item name="android:layout_marginTop">@dimen/contextual_card_vertical_margin</item>
         <item name="android:layout_marginBottom">@dimen/contextual_card_vertical_margin</item>
         <item name="android:layout_marginStart">@dimen/contextual_card_side_margin</item>
         <item name="android:layout_marginEnd">@dimen/contextual_card_side_margin</item>
         <item name="cardBackgroundColor">@color/contextual_card_background</item>
         <item name="cardCornerRadius">@dimen/contextual_card_corner_radius</item>
         <item name="cardElevation">0dp</item>
-        <item name="strokeColor">@color/contextual_card_stroke_color</item>
-        <item name="strokeWidth">1dp</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/fluid_card_stroke</item>
+        <item name="rippleColor">?android:attr/colorControlHighlight</item>
+    </style>
+
+    <style name="PreferenceCardStyle">
+        <item name="android:layout_marginTop">@dimen/preference_card_vertical_margin</item>
+        <item name="android:layout_marginStart">@dimen/preference_card_side_margin</item>
+        <item name="android:layout_marginEnd">@dimen/preference_card_side_margin</item>
+        <item name="cardBackgroundColor">@color/contextual_card_background</item>
+        <item name="cardCornerRadius">@dimen/contextual_card_corner_radius</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/fluid_card_stroke</item>
         <item name="rippleColor">?android:attr/colorControlHighlight</item>
     </style>
 
     <style name="SearchBarStyle">
-        <item name="android:layout_marginBottom">@dimen/search_bar_vertical_margin</item>
-        <item name="android:layout_marginStart">@dimen/search_bar_side_margin</item>
-        <item name="android:layout_marginEnd">@dimen/search_bar_side_margin</item>
+        <item name="android:layout_marginStart">@dimen/search_bar_left_margin</item>
+        <item name="android:layout_marginEnd">@dimen/search_bar_right_margin</item>
+        <item name="cardBackgroundColor">@color/search_bar_background</item>
         <item name="cardCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
-        <item name="enforceMaterialTheme">true</item>
         <item name="cardElevation">0dp</item>
-        <item name="strokeColor">@color/search_bar_stroke_color</item>
-        <item name="strokeWidth">1dp</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/fluid_card_stroke</item>
         <item name="shapeAppearance">@null</item>
+        <item name="rippleColor">?android:attr/colorControlHighlight</item>
     </style>
 
     <style name="SettingsHeaderStyle">
-        <item name="android:layout_marginTop">@dimen/settings_header_vertical_margin</item>
-        <item name="android:layout_marginBottom">@dimen/settings_header_bottom_margin</item>
-        <item name="android:layout_marginStart">@dimen/settings_header_side_margin</item>
-        <item name="android:layout_marginEnd">@dimen/settings_header_side_margin</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/settings_header_color</item>
     </style>
 
     <style name="ConditionCardBorderlessButton"

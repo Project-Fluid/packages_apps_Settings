@@ -126,24 +126,24 @@
     <dimen name="switchbar_subsettings_margin_start">72dp</dimen>
     <dimen name="switchbar_subsettings_margin_end">16dp</dimen>
 
-    <dimen name="settings_header_side_margin">16dp</dimen>
-    <dimen name="settings_header_vertical_margin">48dp</dimen>
-    <dimen name="settings_header_bottom_margin">24dp</dimen>
-
     <dimen name="search_bar_margin">16dp</dimen>
-    <dimen name="search_bar_side_margin">16dp</dimen>
-    <dimen name="search_bar_vertical_margin">16dp</dimen>
+    <dimen name="search_bar_left_margin">24dp</dimen>
+    <dimen name="search_bar_right_margin">12dp</dimen>
+    <dimen name="search_bar_top_margin">16dp</dimen>
+    <dimen name="search_bar_bottom_margin">16dp</dimen>
 
-    <dimen name="search_bar_height">56dp</dimen>
-    <dimen name="search_bar_corner_radius">2dp</dimen>
+    <dimen name="search_bar_height">48dp</dimen>
+    <dimen name="search_bar_corner_radius">16dp</dimen>
     <dimen name="search_bar_text_size">16dp</dimen>
     <dimen name="search_bar_card_elevation">0dp</dimen>
     <dimen name="search_bar_content_inset">64dp</dimen>
     <dimen name="search_bar_avatar_end_padding">0dp</dimen>
     <!-- 32dp (avatar size) + 16 dp (search_bar_avatar_end_padding) -->
-    <dimen name="search_bar_avatar_width">32dp</dimen>
+    <dimen name="search_bar_avatar_dimens">24dp</dimen>
     <!-- (search_bar_height 48dp - avatar size 32dp) / 2  -->
     <dimen name="search_bar_avatar_top_bottom_padding">0dp</dimen>
+
+    <dimen name="main_content_side_margin">8dp</dimen>
 
     <!-- Dimensions for Wifi Assistant Card -->
     <dimen name="wifi_assistant_padding_top_bottom">16dp</dimen>
@@ -344,9 +344,9 @@
 
     <!-- Homepage cards size and padding -->
     <dimen name="contextual_card_icon_size">24dp</dimen>
-    <dimen name="contextual_card_vertical_margin">16dp</dimen>
-    <dimen name="contextual_card_side_margin">8dp</dimen>
-    <dimen name="contextual_card_icon_padding_start">14dp</dimen>
+    <dimen name="contextual_card_vertical_margin">8dp</dimen>
+    <dimen name="contextual_card_side_margin">12dp</dimen>
+    <dimen name="contextual_card_icon_padding_start">16dp</dimen>
     <dimen name="contextual_card_text_padding_start">16dp</dimen>
     <dimen name="contextual_card_padding_end">16dp</dimen>
     <dimen name="contextual_card_corner_radius">@*android:dimen/config_dialogCornerRadius</dimen>
@@ -355,6 +355,8 @@
     <dimen name="contextual_half_card_padding_bottom">16dp</dimen>
     <dimen name="contextual_half_card_title_margin_top">12dp</dimen>
     <dimen name="contextual_card_preallocated_height">0dp</dimen>
+    <dimen name="preference_card_vertical_margin">24dp</dimen>
+    <dimen name="preference_card_side_margin">8dp</dimen>
 
     <!-- Homepage dismissal cards size and padding -->
     <dimen name="contextual_card_dismissal_margin_top">12dp</dimen>

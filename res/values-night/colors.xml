@@ -20,9 +20,7 @@
     <color name="switchbar_switch_thumb_tint">@android:color/black</color>
     <color name="homepage_card_dismissal_background">@*android:color/material_grey_900</color>
     <color name="contextual_card_background">@android:color/transparent</color>
-    <color name="search_bar_background">@android:color/transparent</color>
-    <color name="search_bar_stroke_color">#13FFFFFF</color>
-    <color name="contextual_card_stroke_color">#13FFFFFF</color>
+    <color name="search_bar_background">#1B1B1B</color>
 
     <!-- Dialog background color. -->
     <color name="dialog_background">@*android:color/material_grey_800</color>
@@ -45,8 +43,5 @@
 
     <color name="homepage_generic_icon_background">#14253D</color>
 
-    <!-- Fluid version page colors -->
-    <color name="fluid_version_border_color">#242424</color>
-    <color name="fluid_version_text_color">#FFFFFF</color>
 </resources>
 

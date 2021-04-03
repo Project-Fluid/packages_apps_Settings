@@ -1,0 +1,26 @@
+<!--
+  Copyright (C) 2021 ProjectFluid
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="?android:attr/colorAccent"
+        android:fillType="evenOdd"
+        android:pathData="M21.65 5.34c0.06-0.01 0.13 0 0.18 0.01c0.16 0.06 0.27 0.23 0.24 0.42c-0.3 1.58-0.19 3.01 0.11 4.34c0.3 1.32 0.8 2.54 1.26 3.71l0.4 1.01c0.85 2.2 1.41 4.3 0.25 6.67c-0.09 0.18-0.19 0.37-0.3 0.55c-0.15 0.26-0.31 0.5-0.47 0.74c-1.07 1.55-2.25 2.52-3.44 3.1c-0.5 0.26-1.02 0.44-1.52 0.56c-1.67 0.4-3.24 0.18-4.35-0.13l-0.07-0.02l-0.03-0.01c-0.5-0.14-0.89-0.3-1.16-0.41c-0.52-0.22-1.43-0.86-2.31-1.84c-0.97-1.08-1.9-2.57-2.27-4.38c-0.16-0.75-0.21-1.55-0.14-2.4c0.09-0.94 0.33-1.93 0.78-2.97c0.36-0.82 0.82-1.58 1.35-2.28c0.58-0.75 1.24-1.43 1.95-2.05c1.28-1.1 2.74-2 4.17-2.7c0.84-0.42 1.67-0.77 2.45-1.06c1.1-0.4 2.1-0.68 2.92-0.86zm-2.47 3.87h0.12c0.12 0.02 0.2 0.13 0.19 0.26c-0.09 1.09 0.08 2.04 0.37 2.91c0.28 0.87 0.69 1.66 1.08 2.42l0.33 0.66c0.71 1.42 1.23 2.8 0.62 4.46l-0.17 0.4l-0.26 0.53c-0.6 1.11-1.32 1.84-2.07 2.31c-0.32 0.2-0.65 0.36-0.97 0.48c-1.08 0.38-2.14 0.33-2.9 0.2l-0.05-0.01h-0.02c-0.33-0.07-0.6-0.15-0.8-0.2c-0.35-0.12-1-0.49-1.65-1.1c-0.71-0.65-1.43-1.6-1.8-2.79c-0.15-0.5-0.24-1.03-0.25-1.6c0-0.64 0.09-1.32 0.32-2.05c0.18-0.58 0.43-1.12 0.74-1.63c0.33-0.54 0.72-1.04 1.16-1.5c0.77-0.84 1.68-1.54 2.58-2.1c0.53-0.34 1.05-0.63 1.55-0.88c0.7-0.34 1.36-0.6 1.88-0.77z"/>
+</vector>

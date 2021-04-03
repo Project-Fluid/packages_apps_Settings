@@ -3502,7 +3502,7 @@
         <!-- Fluid Customisation activity -->
         <activity android:name=".Settings$FluidCustomisationActivity"
                   android:label="@string/fluid_customisation_title"
-                  android:icon="@drawable/ic_homepage_fluidcustomisation"
+                  android:icon="@drawable/ic_settings_fluidcustomisation"
                   android:parentActivityName="com.android.settings">
             <intent-filter>
                 <action android:name="com.android.settings.action.SETTINGS"/>

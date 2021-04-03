@@ -21,6 +21,15 @@
     android:key="top_level_settings"
     android:title="Settings">
 
+    <com.android.settings.widget.CardPreference
+        android:key="top_level_customisation"
+        android:title="@string/fluid_customisation_title"
+        android:summary="@string/fluid_customisation_summary"
+        android:icon="@drawable/ic_settings_fluidcustomisation"
+        android:order="-150"
+        android:fragment="com.fluid.customisation.FluidCustomisation"
+        settings:controller="com.fluid.customisation.TopLevelCustomisationEntryPreferenceController"/>
+
     <Preference
         android:key="top_level_network"
         android:title="@string/network_dashboard_title"
@@ -46,15 +55,6 @@
         android:icon="@drawable/ic_homepage_apps"
         android:order="-110"
         android:fragment="com.android.settings.applications.AppAndNotificationDashboardFragment"/>
-
-    <Preference
-        android:key="top_level_customisation"
-        android:title="@string/fluid_customisation_title"
-        android:summary="@string/fluid_customisation_summary"
-        android:icon="@drawable/ic_homepage_fluidcustomisation"
-        android:order="-100"
-        android:fragment="com.fluid.customisation.FluidCustomisation"
-        settings:controller="com.fluid.customisation.TopLevelCustomisationEntryPreferenceController" />
 
     <Preference
         android:key="top_level_battery"
