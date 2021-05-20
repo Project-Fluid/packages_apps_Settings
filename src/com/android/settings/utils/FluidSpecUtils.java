@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright (C) 2017 The Android Open Source Project
  * Copyright (C) 2020 The "Best Improved Cherry Picked Rom" Project
  * Copyright (C) 2020 Project Fluid
@@ -19,89 +19,73 @@ package com.android.settings.utils;
 
 import android.os.SystemProperties;
 import android.content.Context;
+import android.os.Build;
 import android.os.Environment;
 import android.os.StatFs;
 import android.view.Display;
 import android.view.WindowManager;
 import android.util.DisplayMetrics;
 import android.graphics.Point;
-import androidx.annotation.VisibleForTesting;
 
 import com.android.internal.os.PowerProfile;
 import com.android.internal.util.MemInfoReader;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import com.android.settings.R;
 
 public class FluidSpecUtils {
-    private static final String DEVICE_NAME_MODEL_PROPERTY = "ro.product.system.model";
     private static final String MAINTAINER_NAME_MODEL_PROPERTY = "ro.fluid.maintainer";
     private static final String FLUID_CPU_MODEL_PROPERTY = "ro.fluid.cpu";
     private static final String FALLBACK_CPU_MODEL_PROPERTY = "ro.board.platform";
     private static final String FLUID_MAINTAINER_PROPERTY = "ro.fluid.maintainer";
-    private static final String POWER_PROFILE_CLASS = "com.android.internal.os.PowerProfile";
-    public static String aproxStorage;
 
     public static String getTotalInternalMemorySize() {
         File path = Environment.getDataDirectory();
         StatFs stat = new StatFs(path.getPath());
         long blockSize = stat.getBlockSizeLong();
         long totalBlocks = stat.getBlockCountLong();
-        double total = (totalBlocks * blockSize)/ 1073741824;
+        double total = (totalBlocks * blockSize) / 1073741824;
         int lastval = (int) Math.round(total);
-            if ( lastval > 0  && lastval <= 16){
-                aproxStorage = "16";
-            } else if (lastval > 16 && lastval <=32) {
-                aproxStorage = "32";
-            } else if (lastval > 32 && lastval <=64) {
-                aproxStorage = "64";
-            } else if (lastval > 64 && lastval <=128) {
-                aproxStorage = "128";
-            } else if (lastval > 128 && lastval <= 256) {
-                aproxStorage = "256";
-            } else if (lastval > 256 && lastval <= 512) {
-                aproxStorage = "512";
-            } else if (lastval > 512) {
-                aproxStorage = "512+";
-            } else aproxStorage = "null";
-        return aproxStorage;
+        if (lastval > 0  && lastval <= 16)
+            return "16";
+        else if (lastval > 16 && lastval <=32)
+            return "32";
+        else if (lastval > 32 && lastval <=64)
+            return "64";
+        else if (lastval > 64 && lastval <=128)
+            return "128";
+        else if (lastval > 128 && lastval <= 256)
+            return "256";
+        else if (lastval > 256 && lastval <= 512)
+            return "512";
+        else if (lastval > 512)
+            return "512+";
+        else return "null";
     }
 
     public static int getTotalRAM() {
         MemInfoReader memReader = new MemInfoReader();
         memReader.readMemInfo();
-        String aproxStorage;
-        double totalmem = memReader.getTotalSize();
-        double gb = (totalmem / 1073741824) + 0.3f; // Cause 4gig devices show memory as 3.48 .-.
-        int gigs = (int) Math.round(gb);
-        return gigs;
+        double totalMemB = memReader.getTotalSize();
+        double totalMemGB = (totalMemB / 1073741824) + 0.3f; // Cause 4gig devices show memory as 3.48 .-.
+        int totalMemRounded = (int) Math.round(totalMemGB);
+        return totalMemRounded;
     }
 
     public static String getDeviceName() {
-        String deviceModel = SystemProperties.get(DEVICE_NAME_MODEL_PROPERTY);
-        if (!deviceModel.isEmpty())
-            return deviceModel;    
-        else
-            return "unknown";
+        return Build.MODEL;
     }
 
     public static String getProcessorModel() {
         String cpuModelFluid = SystemProperties.get(FLUID_CPU_MODEL_PROPERTY);
         String cpuModelFallback = SystemProperties.get(FALLBACK_CPU_MODEL_PROPERTY);
-        if (!cpuModelFluid.isEmpty()) {
+        if (!cpuModelFluid.isEmpty())
             return cpuModelFluid;
-        } else if (!cpuModelFallback.isEmpty()) {
+        else if (!cpuModelFallback.isEmpty())
             return cpuModelFallback;
-        } else {
+        else
             return "unknown";
-        }
     }
 
     public static String getScreenRes(Context context) {
@@ -109,9 +93,9 @@ public class FluidSpecUtils {
         Display display = windowManager.getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
-        int width = size.x;
-        int height = size.y + getNavigationBarHeight(windowManager);
-        return width + "x" + height;
+        int screenWidth = size.x;
+        int screenHeight = size.y + getNavigationBarHeight(windowManager);
+        return screenWidth + "x" + screenHeight;
     }
 
     private static int getNavigationBarHeight(WindowManager wm) {
@@ -129,35 +113,16 @@ public class FluidSpecUtils {
     public static String getMaintainerName() {
         String maintainer = SystemProperties.get(MAINTAINER_NAME_MODEL_PROPERTY);
         if (!maintainer.isEmpty())
-            return maintainer;    
+            return maintainer;
         else
             return "unknown";
     }
 
     public static int getBatteryCapacity(Context context) {
-        Object powerProfile = null;
-
-        double batteryCapacity = 0;
-        try {
-            powerProfile = Class.forName(POWER_PROFILE_CLASS)
-                            .getConstructor(Context.class).newInstance(context);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } 
-        try {
-            batteryCapacity = (Double) Class
-                            .forName(POWER_PROFILE_CLASS)
-                            .getMethod("getAveragePower", java.lang.String.class)
-                            .invoke(powerProfile, "battery.capacity");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        PowerProfile powerProfile = new PowerProfile(context);
+        double batteryCapacity = powerProfile.getBatteryCapacity();
         String str = Double.toString(batteryCapacity);
         String strArray[] = str.split("\\.");
-        int batteryCapacityInt = Integer.parseInt(strArray[0]);
-
-        return batteryCapacityInt;
+        return Integer.parseInt(strArray[0]);
     }
 }
