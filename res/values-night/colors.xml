@@ -20,7 +20,7 @@
     <color name="switchbar_switch_thumb_tint">@android:color/black</color>
     <color name="homepage_card_dismissal_background">@*android:color/material_grey_900</color>
     <color name="contextual_card_background">@android:color/transparent</color>
-    <color name="search_bar_background">#1B1B1B</color>
+    <color name="search_bar_background">@android:color/transparent</color>
 
     <!-- Dialog background color. -->
     <color name="dialog_background">@*android:color/material_grey_800</color>

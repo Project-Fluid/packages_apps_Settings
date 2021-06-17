@@ -24,4 +24,6 @@
     <color name="settings_header_color">#FFFFFFFF</color>
     <color name="fluid_card_stroke">#14FFFFFF</color>
 
+    <color name="progress_card_background_color">@*android:color/primary_device_default_settings</color>
+
 </resources>
