@@ -40,7 +40,8 @@ import com.android.settingslib.Utils;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.core.lifecycle.events.OnStart;
-import com.android.settingslib.widget.UsageProgressBarPreference;
+
+import org.projectfluid.ui.preference.FluidBatteryCardPreference;
 
 /**
  * Controller that update the battery header view
@@ -55,7 +56,7 @@ public class BatteryHeaderPreferenceController extends BasePreferenceController
     @VisibleForTesting
     BatteryStatusFeatureProvider mBatteryStatusFeatureProvider;
     @VisibleForTesting
-    UsageProgressBarPreference mBatteryUsageProgressBarPref;
+    FluidBatteryCardPreference mBatteryCardPreference;
 
     private Activity mActivity;
     private PreferenceFragmentCompat mHost;
@@ -85,15 +86,13 @@ public class BatteryHeaderPreferenceController extends BasePreferenceController
     @Override
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
-        mBatteryUsageProgressBarPref = screen.findPreference(getPreferenceKey());
+        mBatteryCardPreference = screen.findPreference(getPreferenceKey());
         //Set up loading text first to prevent layout flaky before info loaded.
-        mBatteryUsageProgressBarPref.setBottomSummary(
+        mBatteryCardPreference.setSummary(
                 mContext.getString(R.string.settings_license_activity_loading));
 
-        if (com.android.settings.Utils.isBatteryPresent(mContext)) {
-            quickUpdateHeaderPreference();
-        } else {
-            mBatteryUsageProgressBarPref.setVisible(false);
+        if (!com.android.settings.Utils.isBatteryPresent(mContext)) {
+            mBatteryCardPreference.setVisible(false);
         }
     }
 
@@ -139,30 +138,15 @@ public class BatteryHeaderPreferenceController extends BasePreferenceController
 
     public void updateHeaderPreference(BatteryInfo info) {
         if (!mBatteryStatusFeatureProvider.triggerBatteryStatusUpdate(this, info)) {
-            mBatteryUsageProgressBarPref.setBottomSummary(generateLabel(info));
+            mBatteryCardPreference.setSummary(generateLabel(info));
         }
-
-        mBatteryUsageProgressBarPref.setUsageSummary(
-                formatBatteryPercentageText(info.batteryLevel));
-        mBatteryUsageProgressBarPref.setPercent(info.batteryLevel, BATTERY_MAX_LEVEL);
     }
 
     /**
      * Callback which receives text for the summary line.
      */
     public void updateBatteryStatus(String label, BatteryInfo info) {
-        mBatteryUsageProgressBarPref.setBottomSummary(label != null ? label : generateLabel(info));
-    }
-
-    public void quickUpdateHeaderPreference() {
-        Intent batteryBroadcast = mContext.registerReceiver(null,
-                new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
-        final int batteryLevel = Utils.getBatteryLevel(batteryBroadcast);
-        final boolean discharging =
-                batteryBroadcast.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1) == 0;
-
-        mBatteryUsageProgressBarPref.setUsageSummary(formatBatteryPercentageText(batteryLevel));
-        mBatteryUsageProgressBarPref.setPercent(batteryLevel, BATTERY_MAX_LEVEL);
+        mBatteryCardPreference.setSummary(label != null ? label : generateLabel(info));
     }
 
     /**
@@ -174,10 +158,5 @@ public class BatteryHeaderPreferenceController extends BasePreferenceController
         if (mBatteryTip != null && batteryInfo != null) {
             updateHeaderPreference(batteryInfo);
         }
-    }
-
-    private CharSequence formatBatteryPercentageText(int batteryLevel) {
-        return TextUtils.expandTemplate(mContext.getText(R.string.battery_header_title_alternate),
-                NumberFormat.getIntegerInstance().format(batteryLevel));
     }
 }

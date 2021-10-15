@@ -298,15 +298,6 @@ public class PowerUsageSummary extends PowerUsageBase implements
     }
 
     @Override
-    protected void restartBatteryStatsLoader(@BatteryUpdateType int refreshType) {
-        super.restartBatteryStatsLoader(refreshType);
-        // Update battery header if battery is present.
-        if (mIsBatteryPresent) {
-            mBatteryHeaderPreferenceController.quickUpdateHeaderPreference();
-        }
-    }
-
-    @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         mBatteryTipPreferenceController.saveInstanceState(outState);
