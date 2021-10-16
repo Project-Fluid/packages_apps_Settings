@@ -43,9 +43,11 @@ android_library {
         "SettingsLibDefaults",
         "SettingsLib-search-defaults",
     ],
-
-    srcs: ["src/**/*.java"],
-
+    srcs: [
+        "src/**/*.java",
+        "FluidCustomisation/src/**/*.java",
+        "FluidCustomisation/src/**/*.kt",
+    ],
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
         "androidx.slice_slice-builders",
@@ -74,7 +76,11 @@ android_library {
         "android.hardware.dumpstate-V1.1-java",
         "lottie",
     ],
-
+    resource_dirs: [
+        "res",
+        "FluidCustomisation/res",
+    ],
+    aaptflags: ["--extra-packages org.projectfluid.customisation"],
     libs: [
         "telephony-common",
         "ims-common",

@@ -24,7 +24,7 @@
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/ic_settings_wireless"
         android:key="top_level_network"
-        android:order="-150"
+        android:order="-160"
         android:title="@string/network_dashboard_title"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.network.TopLevelNetworkEntryPreferenceController"/>
@@ -33,10 +33,18 @@
         android:fragment="com.android.settings.connecteddevice.ConnectedDeviceDashboardFragment"
         android:icon="@drawable/ic_devices_other"
         android:key="top_level_connected_devices"
-        android:order="-140"
+        android:order="-150"
         android:title="@string/connected_devices_dashboard_title"
         android:summary="@string/connected_devices_dashboard_default_summary"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
+
+    <Preference
+        android:fragment="org.projectfluid.customisation.FluidCustomisation"
+        android:icon="@drawable/ic_fluid"
+        android:key="top_level_fluid_customisation"
+        android:order="-140"
+        android:title="@string/fluid_customisation_title"
+        android:summary="@string/fluid_customisation_summary"/>
 
     <Preference
         android:fragment="com.android.settings.applications.AppDashboardFragment"
