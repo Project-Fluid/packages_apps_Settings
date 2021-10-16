@@ -48,6 +48,11 @@
     <string name="fingerprint_enroll_touch_dialog_message_side" product="device">Touch the sensor on the side of your device.</string>
     <string name="fingerprint_enroll_touch_dialog_message_side" product="default">Touch the sensor on the side of your phone.</string>
 
+    <!-- Fluid Customisation on homepage -->
+    <string name="fluid_customisation_title">Fluid Customisation</string>
+    <string name="fluid_customisation_summary">Keep the flow on!</string>
+    <string name="menu_key_fluid">top_level_fluid_customisation</string>
+
     <!-- Android debugging as root -->
     <string name="adb_enable_root">Rooted debugging</string>
     <string name="adb_enable_summary_root">Allow running Android debugging as root</string>
