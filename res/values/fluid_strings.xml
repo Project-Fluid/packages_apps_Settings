@@ -14,13 +14,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Fluid version -->
-    <string name="fluid_version">Fluid version</string>
-    <!-- Vendor security patch -->
-    <string name="vendor_security_patch">Vendor security patch</string>
-    <!-- Build date -->
-    <string name="build_date">Build date</string>
-
     <!-- Android debugging as root -->
     <string name="adb_enable_root">Rooted debugging</string>
     <string name="adb_enable_summary_root">Allow running Android debugging as root</string>
