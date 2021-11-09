@@ -91,7 +91,7 @@
 
     <!-- TODO(b/174964721): make this a PrimarySwitchPreference -->
     <!-- Link ringtone and notification volumes -->
-    <com.fluid.customisation.preference.SecureSettingSwitchPreference
+    <org.projectfluid.customisation.preference.SecureSettingSwitchPreference
         android:key="volume_link_notification"
         android:title="@string/volume_link_notification_title"
         android:defaultValue="true"
