@@ -54,6 +54,7 @@ android_library {
         "androidx.slice_slice-core",
         "androidx.slice_slice-view",
         "androidx.core_core",
+        "androidx.core_core-ktx",
         "androidx.appcompat_appcompat",
         "androidx.cardview_cardview",
         "androidx.preference_preference",
@@ -76,6 +77,10 @@ android_library {
         "android.hardware.dumpstate-V1.1-java",
         "lottie",
         "windowExtLib",
+        "FluidUI",
+        "kotlin-stdlib",
+        "kotlinx-coroutines-core",
+        "kotlinx-coroutines-android",
     ],
     resource_dirs: [
         "res",
