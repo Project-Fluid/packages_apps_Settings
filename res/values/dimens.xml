@@ -126,25 +126,27 @@
     <dimen name="switchbar_subsettings_margin_end">16dp</dimen>
 
     <!-- Search bar -->
-    <dimen name="search_bar_margin">16dp</dimen>
-    <dimen name="search_bar_height">52dp</dimen>
-    <dimen name="search_bar_text_size">20sp</dimen>
+    <dimen name="search_bar_margin">20dp</dimen>
+    <dimen name="search_bar_margin_top">16dp</dimen>
+    <dimen name="search_bar_margin_bottom">6dp</dimen>
+    <dimen name="search_bar_height">48dp</dimen>
+    <dimen name="search_bar_text_size">18sp</dimen>
     <dimen name="search_bar_corner_radius">28dp</dimen>
     <dimen name="search_bar_content_inset">56dp</dimen>
 
     <!-- Avatar -->
-    <dimen name="avatar_length">48dp</dimen>
+    <dimen name="avatar_length">40dp</dimen>
     <dimen name="avatar_margin_top">56dp</dimen>
-    <dimen name="avatar_margin_end">24dp</dimen>
+    <dimen name="avatar_margin_end">20dp</dimen>
 
     <!-- Homepage title -->
     <!-- avatar_length + avatar_margin_top -->
-    <dimen name="homepage_title_margin_top">104dp</dimen>
+    <dimen name="homepage_title_margin_top">96dp</dimen>
     <dimen name="homepage_title_margin_bottom">8dp</dimen>
-    <dimen name="homepage_title_margin_horizontal">24dp</dimen>
+    <dimen name="homepage_title_margin_horizontal">20dp</dimen>
 
     <!-- Homepage menu entry -->
-    <dimen name="homepage_menu_entry_padding_horizontal">16dp</dimen>
+    <dimen name="homepage_menu_entry_padding_horizontal">20dp</dimen>
     <dimen name="homepage_menu_entry_corner_radius">28dp</dimen>
 
     <!-- Dimensions for Wifi Assistant Card -->

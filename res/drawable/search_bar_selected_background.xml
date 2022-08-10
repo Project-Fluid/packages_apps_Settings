@@ -15,6 +15,6 @@
 -->
 
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-        android:color="?android:attr/colorControlHighlight">
-    <item android:drawable="@color/search_bar_background"/>
+        android:color="@color/coloured_ripple">
+    <item android:drawable="@color/surface1"/>
 </ripple>

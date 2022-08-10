@@ -26,6 +26,7 @@ import android.app.settings.SettingsEnums;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.ArraySet;
@@ -53,10 +54,14 @@ import com.android.settings.activityembedding.ActivityEmbeddingRulesController;
 import com.android.settings.activityembedding.ActivityEmbeddingUtils;
 import com.android.settings.core.CategoryMixin;
 import com.android.settings.core.FeatureFlags;
+import com.android.settings.core.SubSettingLauncher;
 import com.android.settings.homepage.contextualcards.ContextualCardsFragment;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.Utils;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
+
+import org.projectfluid.ui.widget.FluidSuggestionCard;
+import org.projectfluid.customisation.FluidCustomisation;
 
 import java.net.URISyntaxException;
 import java.util.Set;
@@ -158,6 +163,17 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         updateHomepageBackground();
         mLoadedListeners = new ArraySet<>();
 
+        final FluidSuggestionCard customisationCard = findViewById(R.id.customisation_card);
+        customisationCard.setTitle(getString(R.string.fluid_customisation_suggestion_title));
+        customisationCard.setSummary(getString(R.string.fluid_customisation_suggestion_summary));
+        Drawable cardIcon = getDrawable(R.drawable.ic_fluid_customisation);
+        cardIcon.setTint(getColor(R.color.homepage_customisation_card_icon_color));
+        customisationCard.setIcon(cardIcon);
+        customisationCard.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                openFluidCustomisationSettings();
+            }
+        });
         initSearchBarView();
 
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
@@ -193,6 +209,13 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     protected void onStart() {
         ((SettingsApplication) getApplication()).setHomeActivity(this);
         super.onStart();
+    }
+
+    private void openFluidCustomisationSettings() {
+        new SubSettingLauncher(this)
+                .setDestination(FluidCustomisation.class.getName())
+                .setSourceMetricsCategory(mMainFragment.getMetricsCategory())
+                .launch();
     }
 
     @Override
@@ -427,7 +450,8 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 
     private int getSearchBoxHeight() {
         final int searchBarHeight = getResources().getDimensionPixelSize(R.dimen.search_bar_height);
-        final int searchBarMargin = getResources().getDimensionPixelSize(R.dimen.search_bar_margin);
-        return searchBarHeight + searchBarMargin * 2;
+        final int searchBarMarginTop = getResources().getDimensionPixelSize(R.dimen.search_bar_margin_top);
+        final int searchBarMarginBottom = getResources().getDimensionPixelSize(R.dimen.search_bar_margin_bottom);
+        return searchBarHeight + searchBarMarginTop + searchBarMarginBottom;
     }
 }

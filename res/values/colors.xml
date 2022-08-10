@@ -137,9 +137,6 @@
     <color name="qr_background_color">#b3ffffff</color> <!-- 70% white transparency -->
     <!-- End of QR code scanner colors -->
 
-    <!-- Search bar background color -->
-    <color name="search_bar_background">?androidprv:attr/colorSurfaceHighlight</color>
-
     <color name="face_enroll_icon_color">#42a5f5</color> <!-- Blue 400 -->
 
     <color name="back_gesture_indicator">#4182ef</color>
@@ -210,4 +207,8 @@
 
     <!-- Battery error text color -->
     <color name="battery_info_error_color_black">@*android:color/primary_text_default_material_light</color>
+
+    <color name="homepage_customisation_card_icon_color">@color/colorPrimary</color>
+    <color name="homepage_icon_color">@color/colorSecondary</color>
+
 </resources>

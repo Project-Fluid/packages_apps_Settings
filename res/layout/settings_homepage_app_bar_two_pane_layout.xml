@@ -32,6 +32,11 @@
         android:layout_marginBottom="16dp"
         android:orientation="horizontal">
 
+        <org.projectfluid.ui.widget.FluidSuggestionCard
+            android:id="@+id/customisation_card"
+            android:layout_width="match_parent"
+            android:layout_height="116dp" />
+
         <include layout="@layout/search_bar_two_pane_version"/>
 
         <ImageView

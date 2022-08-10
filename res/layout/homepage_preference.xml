@@ -32,11 +32,9 @@
         android:id="@+id/icon_frame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="56dp"
-        android:gravity="center"
+        android:minWidth="44dp"
+        android:gravity="start|center_vertical"
         android:orientation="horizontal"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp">
 
@@ -44,8 +42,8 @@
             android:id="@android:id/icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:maxWidth="40dp"
-            app:maxHeight="40dp"/>
+            app:maxWidth="44dp"
+            app:maxHeight="44dp"/>
 
     </LinearLayout>
 

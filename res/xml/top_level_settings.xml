@@ -39,7 +39,7 @@
         android:summary="@string/connected_devices_dashboard_default_summary"
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
-
+    <!--
     <com.android.settings.widget.HomepagePreference
         android:fragment="org.projectfluid.customisation.FluidCustomisation"
         android:icon="@drawable/ic_fluid"
@@ -48,7 +48,7 @@
         android:title="@string/fluid_customisation_title"
         android:summary="@string/fluid_customisation_summary"
         settings:highlightableMenuKey="@string/menu_key_fluid"/>
-
+    -->
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.applications.AppDashboardFragment"
         android:icon="@drawable/ic_apps"
